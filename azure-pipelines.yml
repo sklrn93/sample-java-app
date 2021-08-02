@@ -20,3 +20,11 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+
+jobs:  
+- deployment: VMDeploy
+  displayName: web
+  environment:
+    name:  sk-vm-deploy
+    resourceType: VirtualMachine
+    tags: web
